@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+
+}
+
+body {
+    background-color: hsl(185, 41%, 84%);
+}
+
+.main {
+    position: absolute;
+    max-width: 1440px;
+    height: 100vh;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 1px dotted red;
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+
+
+    .img {
+        position: relative;
+        left: 50%;
+        top: 3em;
+        transform: translate(-50%);
+    }
+
+    .calculatror {
+        position: relative;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 2fr 1fr;
+    }
+}
