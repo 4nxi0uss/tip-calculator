@@ -9,151 +9,267 @@ body {
     background-color: hsl(185, 41%, 84%);
 }
 
-.main {
-    position: absolute;
-    max-width: 1440px;
-    height: 100%;
-    // top: 50%;
+// .main {
+// position: absolute;
+// max-width: 1440px;
+// height: 100%;
+// top: 50%;
+// left: 50%;
+// transform: translateX(-50%);
+// border: 1px dotted red;
+// display: grid;
+// grid-template-rows: 1fr 1fr;
+label {
+    color: #6a7c7e;
+    font-weight: 600;
+}
+
+.img {
+    position: relative;
     left: 50%;
-    transform: translateX(-50%);
-    border: 1px dotted red;
-    // display: grid;
+    top: 3em;
+    transform: translate(-50%);
+}
+
+.calculatror {
+    font-family: monospace;
+    position: absolute;
+    // margin-bottom: 100px;
+    left: 50%;
+    top: 50%;
+    // height: 300px;
+    transform: translate(-50%, -50%);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     // grid-template-rows: 1fr 1fr;
+    border-radius: 15px;
+    padding: 25px;
+    background-color: white;
+    gap: 20px;
 
-    .img {
-        position: relative;
-        left: 50%;
-        top: 3em;
-        transform: translate(-50%);
-    }
-
-    .calculatror {
-        font-family: monospace;
-        position: relative;
-        margin-bottom: 100px;
-        left: 50%;
-        top: 50%;
-        // height: 300px;
-        transform: translate(-50%, -50%);
+    .form {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        // grid-template-rows: 1fr 1fr;
-        border-radius: 15px;
-        padding: 15px;
-        background-color: white;
+        grid-template-rows: 1fr 2fr 1fr;
+        grid-column: 1;
         gap: 15px;
 
-        .form {
+        .bill {
+            grid-row: 1;
+
+            .inputBill {
+                font-size: 24px;
+                // max-width: 180px;
+                background: #f3f8fb url(../../img/icon-dollar.svg) no-repeat 10% 50%;
+                text-align: right;
+                border: none;
+                border-radius: 5px;
+            }
+
+            .inputBill:hover {
+                border: 2px solid #61aaa1;
+            }
+        }
+
+        .selectTip {
+            grid-row: 2;
             display: grid;
-            grid-template-rows: 1fr 2fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 5px;
+
+            .btn5 {
+                padding: 5px;
+                font-size: 24px;
+                background-color: #00474b;
+                border-radius: 5px;
+                border: none;
+                color: white;
+            }
+            .btn5:hover {
+                background-color: #9fe8df;
+                color: #00474b;
+            }
+            .btn5:focus {
+                background-color: #9fe8df;
+                color: #00474b;
+            }
+
+            .btn10 {
+                font-size: 24px;
+                background-color: #00474b;
+                border-radius: 5px;
+                border: none;
+                color: white;
+                padding: 5px;
+            }
+            .btn10:hover {
+                background-color: #9fe8df;
+                color: #00474b;
+            }
+            .btn10:focus {
+                background-color: #9fe8df;
+                color: #00474b;
+            }
+
+            .btn15 {
+                font-size: 24px;
+                background-color: #00474b;
+                border-radius: 5px;
+                border: none;
+                color: white;
+                padding: 5px;
+            }
+            .btn15:hover {
+                background-color: #9fe8df;
+                color: #00474b;
+            }
+            .btn15:focus {
+                background-color: #9fe8df;
+                color: #00474b;
+            }
+
+            .btn25 {
+                font-size: 24px;
+                background-color: #00474b;
+                border-radius: 5px;
+                border: none;
+                color: white;
+                padding: 5px;
+            }
+            .btn25:hover {
+                background-color: #9fe8df;
+                color: #00474b;
+            }
+            .btn25:focus {
+                background-color: #9fe8df;
+                color: #00474b;
+            }
+
+            .btn50 {
+                font-size: 24px;
+                background-color: #00474b;
+                border-radius: 5px;
+                border: none;
+                color: white;
+                padding: 5px;
+            }
+            .btn50:hover {
+                background-color: #9fe8df;
+                color: #00474b;
+            }
+            .btn50:focus {
+                background-color: #9fe8df;
+                color: #00474b;
+            }
+
+            .selectInput {
+                font-size: 24px;
+                max-width: 100px;
+                text-align: right;
+                background: #f3f8fb;
+                border: none;
+                box-shadow: none;
+                text-shadow: none;
+                border-radius: 5px;
+            }
+
+            .selectInput:hover {
+                border: 2px solid #61aaa1;
+                border-radius: 5px;
+            }
+        }
+
+        .numberOfPeople {
+            grid-row: 3;
+
+            .inputPeople {
+                font-size: 24px;
+                // max-width: 180px;
+                background: #f3f8fb url(../../img/icon-person.svg) no-repeat 10% 50%;
+                text-align: right;
+                border: none;
+                border-radius: 5px;
+            }
+
+            .inputPeople:hover {
+                border: 2px solid #61aaa1;
+            }
+        }
+
+
+
+    }
+
+    .outputForm {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 2fr 1fr;
+        grid-column: 2;
+        border-radius: 15px;
+        background-color: #00474b;
+        padding: 15px;
+
+        .tipAmount {
+            color: white;
             grid-column: 1;
+            grid-row: 1;
+        }
 
-            .bill {
-                grid-row: 1;
-
-                .inputBill {
-                    font-size: 24px;
-                    max-width: 180px;
-                    background: #f3f8fb url(../../img/icon-dollar.svg) no-repeat 10% 50%;
-                    text-align: right;
-                    border: none;
-                }
-            }
-
-            .selectTip {
-                grid-row: 2;
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr;
-                grid-template-rows: 1fr 1fr;
-                gap: 5px;
-
-                .btn5 {
-                    font-size: 24px;
-                    background-color: #00474b;
-                    border-radius: 5px;
-                    border: none;
-                    color: white;
-                }
-
-                .btn10 {
-                    font-size: 24px;
-                    background-color: #00474b;
-                    border-radius: 5px;
-                    border: none;
-                    color: white;
-                }
-
-                .btn15 {
-                    font-size: 24px;
-                    background-color: #00474b;
-                    border-radius: 5px;
-                    border: none;
-                    color: white;
-                }
-
-                .btn25 {
-                    font-size: 24px;
-                    background-color: #00474b;
-                    border-radius: 5px;
-                    border: none;
-                    color: white;
-                }
-
-                .btn50 {
-                    font-size: 24px;
-                    background-color: #00474b;
-                    border-radius: 5px;
-                    border: none;
-                    color: white;
-                }
-
-                .selectInput {
-                    font-size: 24px;
-                    max-width: 90px;
-                    text-align: right;
-                }
-            }
-
-            .numberOfPeople {
-                grid-row: 3;
-
-                .inputPeople {
-                    font-size: 24px;
-                    max-width: 180px;
-                    background: #f3f8fb url(../../img/icon-person.svg) no-repeat 10% 50%;
-                    text-align: right;
-                    border: none;
-                }
-            }
-
-
+        .cost {
+            color: #9fe8df;
+            grid-column: 2;
+            grid-row: 1;
+            font-size: 30px;
+            text-align: right;
 
         }
 
-        .outputForm {
-            display: grid;
-            grid-template-rows: 1fr 2fr 1fr;
+        .person1 {
+            color: #72a7ad;
+            grid-column: 1;
+            grid-row: 1;
+        }
+
+        .total {
+            color: white;
+        }
+
+        .totalCost {
+            color: #9fe8df;
             grid-column: 2;
-            border-radius: 15px;
-            background-color: #00474b;
-            padding: 15px;
+            grid-row: 2;
+            font-size: 30px;
+            text-align: right;
+        }
 
-            .btn {
-                grid-row: 3;
-                padding: 10px 15px;
-                background-color: #9fe8df;
-                border: none;
-                border-radius: 5px;
-                font-weight: 1000;
-                color: #00474b;
-                text-transform: uppercase;
-                justify-self: center;
-                align-self: center;
-                // text-align: center;
-                // height: 2em;
-                // width: 5em;
+        .person2 {
+            color: #72a7ad;
+        }
 
-            }
+        .btn {
+            grid-row: 3;
+            grid-column: 1/3;
+            padding: 10px 15px;
+            background-color: #9fe8df;
+            border: none;
+            border-radius: 5px;
+            font-weight: 1000;
+            color: #00474b;
+            text-transform: uppercase;
+            justify-self: center;
+            align-self: center;
+            // text-align: center;
+            // height: 2em;
+            // width: 5em;
+
+        }
+        .btn:hover {
+            z-index: 2;
+            background-color: #9fe8e0b9;
+            color: #016f75;
+
         }
     }
 }
+
+// }
