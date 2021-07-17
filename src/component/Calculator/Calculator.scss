@@ -12,7 +12,7 @@ body {
 .main {
     position: absolute;
     max-width: 1440px;
-    height: 100vh;
+    height: 100%;
     left: 50%;
     transform: translateX(-50%);
     border: 1px dotted red;
@@ -28,12 +28,61 @@ body {
     }
 
     .calculatror {
-        position: relative;
+        font-family: monospace;
+        position: relative;margin-bottom: 100px;
         left: 50%;
         top: 50%;
+        // height: 400px;
         transform: translate(-50%, -50%);
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 2fr 1fr;
+        grid-template-rows: 1fr ;
+        border: 1px dashed blue ;
+
+        .form{
+            display: grid;
+            grid-template-rows: 1fr 2fr 1fr;
+            grid-column: 1;
+
+            .bill{
+                grid-row: 1;
+            }
+
+            .selectTip{
+                grid-row: 2;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: 1fr 1fr 1fr;
+                gap: 5px;
+
+                .selectBtn{
+                font-size: 24px;
+                gap: 10px;
+            }
+            .selectInput{
+                font-size: 24px; 
+                max-width: 100px;
+            }
+            }
+
+            .numberOfPeople{
+                grid-row: 3;
+            }
+
+            .input{
+                font-size: 24px;
+            }
+            
+        }
+        .outputForm{
+            display: grid;
+            grid-template-rows: 1fr 2fr 1fr;
+            grid-column: 2;
+            
+
+            .btn{
+                grid-row: 2;
+            }
+        }
     }
 }
