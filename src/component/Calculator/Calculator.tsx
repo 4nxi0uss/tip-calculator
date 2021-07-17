@@ -12,31 +12,33 @@ const Calculator = () => {
                 <div className='form'>
 
                     <label className='bill' > Bill <br />
-                        <input className='input' type="number" />
+                        <input className='inputBill' type="number" />
                     </label>
 
                     <div>
-
-                        <label className='labelSelectTip' > Select Tip%  </label>
+                        <label className='labelSelectTip' > Select Tip %  </label>
                         <div className='selectTip'>
-                            <button className='btn5%' >5%</button>
-                            <button className='btn10%'>10%</button>
-                            <button className='btn15%'>15%</button>
-                            <button className='btn25%'>25%</button>
-                            <button className='btn50%'>50%</button>
-                            <input className='selectInput' type="number" />
+                            <button className='btn5' >5%</button>
+                            <button className='btn10'>10%</button>
+                            <button className='btn15'>15%</button>
+                            <button className='btn25'>25%</button>
+                            <button className='btn50'>50%</button>
+                            <input className='selectInput' type="number" placeholder='Custom' />
                         </div>
                     </div>
                     <label className='numberOfPeople' > Number of people  <br />
-                        <input className='input' type="number" />
+                        <input className='inputPeople' type="number" />
                     </label>
                 </div>
                 <div className='outputForm'>
-                    <p>Tip Amount</p> <span>tip</span>
-                    <p>/person</p>
-                    <p>Total</p> <span>total cost</span>
-                    <p>/person</p>
-                    <button className='btn' >restart</button>
+                    <div><p>Tip Amount <span>tip</span></p>
+                        <p>/person</p>
+                    </div>
+                    <div><p>Total <span>total cost</span></p>
+                        <p>/person</p>
+                    </div>
+
+                    <button className='btn' >reset</button>
                 </div>
             </section>
         </main>
