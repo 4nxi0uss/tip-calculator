@@ -68,8 +68,11 @@ const Calculator = () => {
                         </div>
                     </div>
 
-                    <label className='numberOfPeople' > Number of people  <br />
-                        <input placeholder='0' onChange={handleNumberOfPeople} value={numberOfPeople} className={Number(numberOfPeople) === 0 ? 'inputPeopleRed' : 'inputPeople'} type="number" min={0} />
+                    <label className='numberOfPeople' > Number of people  {numberOfPeople === '0' ? <span className='redSpan'>Can't be zero</span> : null}
+                        <input placeholder='0' onChange={handleNumberOfPeople} value={numberOfPeople} className={numberOfPeople === '0' 
+                        ? 'inputPeopleRed' 
+                        : 'inputPeople'
+                        } type="number" min={0} />
                     </label>
 
                 </div>
@@ -80,13 +83,21 @@ const Calculator = () => {
                         <br />
                         <span className='person1'>/person</span>
                     </p>
-                    <span className='cost'>{`$${isNaN(Number(tipAmount(bill, inputTip || tip, numberOfPeople))) === true ? "0.00" : tipAmount(bill, inputTip || tip, numberOfPeople)}`}</span>
+                    <span className='cost'>{`$${
+                        isNaN(Number(tipAmount(bill, inputTip || tip, numberOfPeople))) === true 
+                        ? "0.00" 
+                        : tipAmount(bill, inputTip || tip, numberOfPeople) === 'Infinity' 
+                        ? "0.00" 
+                        : tipAmount(bill, inputTip || tip, numberOfPeople)}`}</span>
 
                     <p className='total'>Total
                         <br />
                         <span className='person2'>/person</span>
                     </p>
-                    <span className='totalCost'>{`$${isNaN(Number(totalCost(bill, inputTip || tip, numberOfPeople))) === true ? "0.00" : totalCost(bill, inputTip || tip, numberOfPeople)}`}</span>
+                    <span className='totalCost'>{`$${
+                        isNaN(Number(totalCost(bill, inputTip || tip, numberOfPeople))) === true 
+                        ? "0.00" 
+                        : totalCost(bill, inputTip || tip, numberOfPeople)}`}</span>
 
                     <button className={'btn'} onClick={handleReset}>reset</button>
                 </div>
