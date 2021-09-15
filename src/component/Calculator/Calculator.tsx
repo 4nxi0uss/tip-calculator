@@ -10,17 +10,17 @@ const Calculator = () => {
     const [inputTip, setInputTip] = useState<number | undefined | string>()
     const [numberOfPeople, setNumberOfPeople] = useState<number | undefined | string>()
 
-    const handleBill = (e: any) => {
+    const handleBill = (e: React.ChangeEvent<HTMLInputElement>) => {
         setBill(e.target.value)
     }
     const handleTip = (e: any) => {
         setInputTip(Number(''));
         setTip(e.target.value);
     }
-    const handleNumberOfPeople = (e: any) => {
+    const handleNumberOfPeople = (e: React.ChangeEvent<HTMLInputElement>) => {
         setNumberOfPeople(e.target.value)
     }
-    const hanldeInputTip = (e: any) => {
+    const hanldeInputTip = (e: React.ChangeEvent<HTMLInputElement>) => {
         setInputTip(e.target.value)
     }
     const tipAmount = (bill: number | any, tip: number | any, people: number | any) => {
@@ -69,9 +69,9 @@ const Calculator = () => {
                     </div>
 
                     <label className='numberOfPeople' > Number of people  {numberOfPeople === '0' ? <span className='redSpan'>Can't be zero</span> : null}
-                        <input placeholder='0' onChange={handleNumberOfPeople} value={numberOfPeople} className={numberOfPeople === '0' 
-                        ? 'inputPeopleRed' 
-                        : 'inputPeople'
+                        <input placeholder='0' onChange={handleNumberOfPeople} value={numberOfPeople} className={numberOfPeople === '0'
+                            ? 'inputPeopleRed'
+                            : 'inputPeople'
                         } type="number" min={0} />
                     </label>
 
@@ -83,21 +83,19 @@ const Calculator = () => {
                         <br />
                         <span className='person1'>/person</span>
                     </p>
-                    <span className='cost'>{`$${
-                        isNaN(Number(tipAmount(bill, inputTip || tip, numberOfPeople))) === true 
-                        ? "0.00" 
-                        : tipAmount(bill, inputTip || tip, numberOfPeople) === 'Infinity' 
-                        ? "0.00" 
-                        : tipAmount(bill, inputTip || tip, numberOfPeople)}`}</span>
+                    <span className='cost'>{`$${isNaN(Number(tipAmount(bill, inputTip || tip, numberOfPeople))) === true
+                            ? "0.00"
+                            : tipAmount(bill, inputTip || tip, numberOfPeople) === 'Infinity'
+                                ? "0.00"
+                                : tipAmount(bill, inputTip || tip, numberOfPeople)}`}</span>
 
                     <p className='total'>Total
                         <br />
                         <span className='person2'>/person</span>
                     </p>
-                    <span className='totalCost'>{`$${
-                        isNaN(Number(totalCost(bill, inputTip || tip, numberOfPeople))) === true 
-                        ? "0.00" 
-                        : totalCost(bill, inputTip || tip, numberOfPeople)}`}</span>
+                    <span className='totalCost'>{`$${isNaN(Number(totalCost(bill, inputTip || tip, numberOfPeople))) === true
+                            ? "0.00"
+                            : totalCost(bill, inputTip || tip, numberOfPeople)}`}</span>
 
                     <button className={'btn'} onClick={handleReset}>reset</button>
                 </div>

@@ -9,17 +9,7 @@ body {
     background-color: hsl(185, 41%, 84%);
 }
 
-// @media screen and (min-width: 1440px){
-// .main {
-// position: absolute;
-// max-width: 1440px;
-// height: 100%;
-// top: 50%;
-// left: 50%;
-// transform: translateX(-50%);
-// border: 1px dotted red;
-// display: grid;
-// grid-template-rows: 1fr 1fr;
+
 label {
     color: #6a7c7e;
     font-weight: 600;
@@ -35,15 +25,12 @@ label {
 .calculatror {
     font-family: monospace;
     position: absolute;
-    // margin-bottom: 100px;
     max-width: 1440px;
     left: 50%;
     top: 50%;
-    // height: 300px;
     transform: translate(-50%, -50%);
     display: grid;
     grid-template-columns: 1fr 1fr;
-    // grid-template-rows: 1fr 1fr;
     border-radius: 15px;
     padding: 25px;
     background-color: white;
@@ -62,11 +49,13 @@ label {
 
             .inputBill {
                 font-size: 24px;
-                // max-width: 180px;
                 background: #f3f8fb url(../../img/icon-dollar.svg) no-repeat 10% 50%;
                 text-align: right;
                 border: none;
                 border-radius: 5px;
+                border: 2px solid transparent;
+                min-width: 296px;
+                width:22.5vw ;
             }
 
             .inputBill:hover {
@@ -178,8 +167,8 @@ label {
 
             .selectInput {
                 font-size: 24px;
-                max-width: 100px;
-                // width: 49%;
+                max-width: 7vw;
+                min-width: 96px;
                 text-align: right;
                 background: #f3f8fb;
                 border: none;
@@ -203,11 +192,13 @@ label {
             }
             .inputPeople {
                 font-size: 24px;
-                // max-width: 180px;
                 background: #f3f8fb url(../../img/icon-person.svg) no-repeat 10% 50%;
                 text-align: right;
                 border: none;
                 border-radius: 5px;
+                border: 2px solid transparent;
+                min-width: 296px;
+                width:22.5vw ;
             }
 
             .inputPeople:hover {
@@ -216,7 +207,6 @@ label {
 
             .inputPeopleRed {
                 font-size: 24px;
-                // max-width: 180px;
                 background: #f3f8fb url(../../img/icon-person.svg) no-repeat 10% 50%;
                 text-align: right;
                 border: 2px solid red;
@@ -288,9 +278,6 @@ label {
             text-transform: uppercase;
             justify-self: center;
             align-self: center;
-            // text-align: center;
-            // height: 2em;
-            // width: 5em;
 
         }
 
@@ -303,8 +290,6 @@ label {
     }
 }
 
-// }
-// }
 
 
 @media screen and (max-width: 375px) {
@@ -351,6 +336,7 @@ label {
                     text-align: right;
                     border: none;
                     border-radius: 5px;
+                    border: 2px solid transparent;
                 }
 
                 .inputBill:hover {
@@ -462,7 +448,8 @@ label {
 
                 .selectInput {
                     font-size: 24px;
-                    max-width: 152px;
+                    max-width: 42vw;
+                    min-width: 145.5px;
                     text-align: right;
                     background: #f3f8fb;
                     border: none;
@@ -488,6 +475,7 @@ label {
                     text-align: right;
                     border: none;
                     border-radius: 5px;
+                    border: 2px solid transparent;
                 }
 
                 .inputPeople:hover {
